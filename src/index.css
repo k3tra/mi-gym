@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+/* Modo oscuro siempre: más cómodo en el gimnasio y ahorra batería */
+:root {
+  color-scheme: dark;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  @apply bg-zinc-950 text-zinc-100 antialiased;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  overscroll-behavior-y: contain;
+}
+
+/* Inputs grandes y legibles (en "components" para que las clases de Tailwind puedan pisarlo) */
+@layer components {
+  .input {
+    @apply w-full min-w-0 rounded-xl border border-zinc-700 bg-zinc-900 px-3 py-2.5 text-base text-zinc-100 outline-none placeholder:text-zinc-500 focus:border-lime-400;
+  }
+}
